@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+// eslint-disable-next-line
+import { Route } from "react-router-dom";
+//import FirstPage from "./Components/FirstPage";
+import Resume from "./Components/Resume";
+import Nav from "./Components/Nav";
+import Navigation from "./Components/Navigation";
+import Contact from "./Components/Contact";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      <Route path="/" exact component={Navigation}></Route>
+      <Route path="/Contact" exact component={Contact}></Route>
+      <Route path="/Resume" exact component={Resume}></Route>
     </div>
   );
 }
-
 export default App;
